@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pA0-T3-gMi">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar Controller-->
+        <scene sceneID="L9d-1G-IPv">
+            <objects>
+                <tabBarController id="pA0-T3-gMi" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hmr-G9-biH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="sZ5-x7-uZb" kind="relationship" relationship="viewControllers" id="w9I-cD-5ml"/>
+                        <segue destination="GH7-2E-fSX" kind="relationship" relationship="viewControllers" id="Oe2-Ed-Q5K"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0QK-Ey-t2Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2419" y="-920"/>
+        </scene>
+        <!--Favourites View Controller-->
+        <scene sceneID="yn4-3c-KGb">
+            <objects>
+                <viewController id="GH7-2E-fSX" customClass="FavouritesViewController" customModule="TopMovies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uwD-I6-9JC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="nGW-07-4aJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="heart" catalog="system" id="35k-Lz-RN1"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zMR-1o-CeG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1536" y="-337"/>
+        </scene>
+        <!--Home View Controller-->
+        <scene sceneID="XbD-iP-Jsl">
+            <objects>
+                <viewController id="sZ5-x7-uZb" customClass="HomeViewController" customModule="TopMovies" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0x3-lP-aa3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="s3T-75-0QE">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="0QF-AX-SyN">
+                                    <size key="itemSize" width="414" height="336"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="MovieColletionViewCell" id="MeC-io-1Tj">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="336"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="dGC-uc-tox">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="336"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="3Eu-zZ-by0">
+                                                    <rect key="frame" x="0.0" y="0.0" width="414" height="336"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="3Eu-zZ-by0" firstAttribute="top" secondItem="dGC-uc-tox" secondAttribute="top" id="7k7-Ii-zPc"/>
+                                                <constraint firstAttribute="bottom" secondItem="3Eu-zZ-by0" secondAttribute="bottom" id="Cq1-tM-3sV"/>
+                                                <constraint firstItem="3Eu-zZ-by0" firstAttribute="centerX" secondItem="dGC-uc-tox" secondAttribute="centerX" id="Tlu-rh-gbK"/>
+                                                <constraint firstAttribute="trailing" secondItem="3Eu-zZ-by0" secondAttribute="trailing" id="ebY-mo-ZKE"/>
+                                                <constraint firstItem="3Eu-zZ-by0" firstAttribute="centerY" secondItem="dGC-uc-tox" secondAttribute="centerY" id="jKK-Sw-aJM"/>
+                                                <constraint firstItem="3Eu-zZ-by0" firstAttribute="leading" secondItem="dGC-uc-tox" secondAttribute="leading" id="wkg-lw-HMP"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <size key="customSize" width="414" height="336"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="wWU-45-1yI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="s3T-75-0QE" firstAttribute="top" secondItem="wWU-45-1yI" secondAttribute="top" id="099-y1-OeE"/>
+                            <constraint firstItem="s3T-75-0QE" firstAttribute="bottom" secondItem="wWU-45-1yI" secondAttribute="bottom" id="QtB-iS-yTs"/>
+                            <constraint firstItem="s3T-75-0QE" firstAttribute="leading" secondItem="wWU-45-1yI" secondAttribute="leading" id="m0Y-7F-rK4"/>
+                            <constraint firstItem="s3T-75-0QE" firstAttribute="trailing" secondItem="wWU-45-1yI" secondAttribute="trailing" id="oH6-0s-Whj"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="house.fill" catalog="system" id="GZs-5Z-2mj"/>
+                    <connections>
+                        <outlet property="moviesCollectionView" destination="s3T-75-0QE" id="F0b-pO-UFc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="thV-vm-RH7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1523.1884057971015" y="-1053.3482142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="109"/>
+        <image name="house.fill" catalog="system" width="128" height="106"/>
+        <image name="image-placeholder" width="350" height="350"/>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
